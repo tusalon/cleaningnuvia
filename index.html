@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nuvia Cleaning · Limpieza de casas en Ocala, FL</title>
+<meta name="description" content="Limpieza de casas en Ocala, Florida: regular, profunda y de mudanza. Cotización por fotos. House cleaning in Ocala, FL — free quote by photos.">
+<meta property="og:title" content="Nuvia Cleaning · Ocala, FL">
+<meta property="og:description" content="Tu casa limpia, sin esfuerzo. / Your home, effortlessly clean.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#0F2A27">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HouseCleaningService","name":"Nuvia Cleaning",
+"areaServed":["Ocala","Marion County","Belleview","Silver Springs","The Villages"],
+"address":{"@type":"PostalAddress","addressLocality":"Ocala","addressRegion":"FL","addressCountry":"US"},
+"telephone":"+13525550100","priceRange":"$$","availableLanguage":["Spanish","English"]}
+</script>
+<style>
+:root{
+  --pine-900:#0F2A27; --pine-800:#173A36; --pine-700:#21504A; --pine-500:#3E7F76;
+  --sage-200:#D9E5DF; --sage-100:#E8F0EC; --cream:#F7F5EF; --white:#fff;
+  --gold:#C9A86A; --gold-deep:#A9844A; --ink:#14201E; --ink-soft:#5B6B67;
+  --f-display:"Playfair Display",Georgia,serif; --f-body:"Montserrat",system-ui,sans-serif;
+  --radius:18px; --radius-lg:28px; --gutter:20px; --header-h:68px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+body{font-family:var(--f-body);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang=es] [lang=en],html[lang=en] [lang=es]{display:none!important}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.1}
+h2{font-size:clamp(32px,5vw,52px);letter-spacing:-.01em;margin:10px 0 14px}
+h3{font-size:24px}
+em{font-style:italic;color:var(--gold)}
+.section{padding:96px 0;position:relative}
+.section--sage{background:var(--sage-100)}
+.section--pine{background:var(--pine-800);color:var(--cream)}
+.lead{color:var(--ink-soft);max-width:560px}
+.section--pine .lead{color:rgba(247,245,239,.74)}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.rv.in{opacity:1;transform:none}
+.rv-img{overflow:hidden}
+.rv-img img{transform:scale(1.15);transition:transform 1.6s var(--ease)}
+.rv-img.in img{transform:scale(1)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:999px;font:600 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-3px)}
+.btn--gold{background:linear-gradient(120deg,#A9844A,#E9D3A3 45%,#C9A86A 70%,#A9844A);background-size:200% 100%;color:var(--pine-900);box-shadow:0 10px 30px -10px rgba(201,168,106,.6)}
+.btn--gold:hover{background-position:100% 0;box-shadow:0 16px 36px -10px rgba(201,168,106,.8)}
+.btn--line{border-color:rgba(247,245,239,.5);color:var(--cream)}
+.btn--line:hover{background:rgba(247,245,239,.1)}
+
+/* ---------- header ---------- */
+.header{position:fixed;inset:0 0 auto;height:var(--header-h);z-index:40;display:flex;align-items:center;color:var(--cream);transition:background .4s,backdrop-filter .4s,box-shadow .4s}
+.header.solid{background:rgba(15,42,39,.92);backdrop-filter:blur(10px);box-shadow:0 8px 30px -18px rgba(0,0,0,.6)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}
+.logo{font-family:var(--f-display);font-size:25px;text-decoration:none}
+.logo em{color:var(--gold)}
+nav.main{display:flex;gap:28px}
+nav.main a,.drawer a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;opacity:.85;position:relative}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--gold);transition:width .35s var(--ease)}
+nav.main a:hover{opacity:1}nav.main a:hover::after{width:100%}
+.hd-right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid rgba(247,245,239,.35);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--cream);font:600 11px var(--f-body);padding:6px 11px;cursor:pointer;transition:background .3s}
+html[lang=es] .lang [data-l=es],html[lang=en] .lang [data-l=en]{background:var(--gold);color:var(--pine-900)}
+.burger{display:none;background:none;border:0;width:38px;height:38px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:8px;right:8px;height:1.5px;background:var(--cream);transition:transform .4s var(--ease),top .4s var(--ease),opacity .3s}
+.burger i:nth-child(1){top:13px}.burger i:nth-child(2){top:19px}.burger i:nth-child(3){top:25px}
+body.menu .burger i:nth-child(1){top:19px;transform:rotate(45deg)}
+body.menu .burger i:nth-child(2){opacity:0}
+body.menu .burger i:nth-child(3){top:19px;transform:rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:30;background:var(--pine-900);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;clip-path:circle(0 at calc(100% - 40px) 34px);transition:clip-path .7s var(--ease);visibility:hidden}
+body.menu .drawer{clip-path:circle(150% at calc(100% - 40px) 34px);visibility:visible}
+.drawer a{font:italic 34px var(--f-display);text-transform:none;letter-spacing:0;color:var(--cream)}
+@media(max-width:820px){nav.main{display:none}.burger{display:block}}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;color:var(--cream);padding-top:var(--header-h);position:relative;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% center;animation:kb 22s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,42,39,.97) 0%,rgba(15,42,39,.82) 42%,rgba(15,42,39,.25) 100%)}
+.hero h1{font-size:clamp(42px,7vw,80px);margin:16px 0 18px;max-width:11em}
+.hero p.lead{color:rgba(247,245,239,.85);font-size:17px;margin-bottom:30px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:44px;font-size:12px;letter-spacing:.06em;color:rgba(247,245,239,.85)}
+.badges>span::before{content:"✓ ";color:var(--gold)}
+.hero .ld{opacity:0;transform:translateY(28px);animation:up 1s var(--ease) forwards;animation-delay:calc(.25s + var(--i,0)*.15s)}
+@keyframes up{to{opacity:1;transform:none}}
+.scroll-cue{position:absolute;left:50%;bottom:26px;width:1px;height:54px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- services (photo cards) ---------- */
+.grid{display:grid;gap:22px;margin-top:44px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 1px 0 var(--sage-200);transition:transform .5s var(--ease),box-shadow .5s}
+.card:hover{transform:translateY(-8px);box-shadow:0 26px 50px -26px rgba(15,42,39,.45)}
+.card .ph{aspect-ratio:4/3}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card:hover .ph.in img{transform:scale(1.07)}
+.card .tx{padding:26px 28px 32px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:15px}
+
+/* ---------- interlude (parallax band) ---------- */
+.band{position:relative;height:min(78vh,620px);overflow:hidden;display:grid;place-items:center;text-align:center;color:var(--cream);isolation:isolate}
+.band img{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover;z-index:-2;will-change:transform}
+.band::before{content:"";position:absolute;inset:0;background:rgba(15,42,39,.62);z-index:-1}
+.band blockquote{font:italic clamp(28px,5vw,58px)/1.15 var(--f-display);max-width:16em;padding:0 var(--gutter)}
+.band blockquote b{color:var(--gold);font-weight:400}
+
+/* ---------- steps ---------- */
+.steps{counter-reset:s}
+.step{counter-increment:s;padding-top:6px;border-top:1px solid var(--pine-500)}
+.step::before{content:"0" counter(s);font:italic 50px var(--f-display);color:var(--gold);display:block;margin:8px 0 6px}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:14px;margin-top:40px}
+.gal figure{border-radius:var(--radius);cursor:zoom-in;position:relative;background:var(--sage-200)}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figure:hover img{transform:scale(1.08)!important}
+.gal .a{grid-column:span 3;grid-row:span 2}.gal .b{grid-column:span 3}.gal .c{grid-column:span 2}.gal .d{grid-column:span 1}
+@media(max-width:700px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}.gal .a{grid-column:span 2}.gal .b{grid-column:span 2}.gal .c,.gal .d{grid-column:span 1}}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(10,24,22,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;cursor:zoom-out;padding:20px}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-height:90vh;border-radius:12px;transform:scale(.94);transition:transform .5s var(--ease)}
+.lb.open img{transform:none}
+
+/* ---------- pricing ---------- */
+.price-box{display:grid;gap:44px;grid-template-columns:1fr;align-items:center}
+@media(min-width:820px){.price-box{grid-template-columns:1.1fr 1fr}}
+.price{font:500 clamp(60px,10vw,100px) var(--f-display);color:var(--gold);line-height:1}
+.price small{font:600 12px var(--f-body);letter-spacing:.2em;display:block;color:rgba(247,245,239,.7);margin-bottom:8px}
+.price-note{font-size:13px;color:rgba(247,245,239,.7);margin-top:12px}
+ul.check{list-style:none;padding:0;display:grid;gap:10px}
+ul.check li::before{content:"✓";color:var(--gold);margin-right:10px;font-weight:600}
+.rate{display:flex;justify-content:space-between;border-bottom:1px solid rgba(247,245,239,.18);padding:12px 0;font-size:15px}
+.rate b{color:var(--gold);font-weight:600}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center}
+.stats b{display:block;font:500 58px var(--f-display);color:var(--pine-700)}
+.stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ---------- area ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chips span{border:1px solid var(--pine-500);color:var(--pine-700);border-radius:999px;padding:8px 18px;font-size:13px;transition:background .3s,color .3s}
+.chips span:hover{background:var(--pine-700);color:var(--cream)}
+
+/* ---------- contact ---------- */
+.contact{display:grid;gap:44px}
+@media(min-width:820px){.contact{grid-template-columns:1fr 1fr}}
+form{display:grid;gap:14px}
+label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,245,239,.75)}
+input,select,textarea{width:100%;margin-top:6px;padding:14px 16px;border-radius:14px;border:1px solid rgba(247,245,239,.25);background:rgba(255,255,255,.07);color:var(--cream);font:400 15px var(--f-body);transition:border-color .3s,background .3s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);background:rgba(255,255,255,.12)}
+select option{color:#000}
+.info p{margin:0 0 14px;color:rgba(247,245,239,.85)}
+.info a{color:var(--gold)}
+.policy{font-size:13px;color:rgba(247,245,239,.65);margin-top:18px}
+footer{background:var(--pine-900);color:rgba(247,245,239,.6);text-align:center;font-size:12px;padding:26px var(--gutter)}
+footer a{color:var(--gold)}
+
+/* ---------- floating whatsapp ---------- */
+.float{position:fixed;right:18px;bottom:18px;z-index:35;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);text-decoration:none;animation:pulse 2.8s infinite}
+.float svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 18px rgba(37,211,102,0)}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv,.hero .ld{opacity:1;transform:none}.rv-img img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="hd"><div class="wrap">
+  <a class="logo" href="#inicio">Nuvia <em>Cleaning</em></a>
+  <nav class="main">
+    <a href="#servicios"><span lang="es">Servicios</span><span lang="en">Services</span></a>
+    <a href="#galeria"><span lang="es">Galería</span><span lang="en">Gallery</span></a>
+    <a href="#proceso"><span lang="es">Proceso</span><span lang="en">How it works</span></a>
+    <a href="#precios"><span lang="es">Precios</span><span lang="en">Pricing</span></a>
+    <a href="#zona"><span lang="es">Zona</span><span lang="en">Area</span></a>
+    <a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+  </nav>
+  <div class="hd-right">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-l="es" type="button">ES</button><button data-l="en" type="button">EN</button>
+    </div>
+    <button class="burger" id="burger" type="button" aria-label="Menu"><i></i><i></i><i></i></button>
+  </div>
+</div></header>
+
+<aside class="drawer" id="drawer">
+  <a href="#servicios"><span lang="es">Servicios</span><span lang="en">Services</span></a>
+  <a href="#galeria"><span lang="es">Galería</span><span lang="en">Gallery</span></a>
+  <a href="#proceso"><span lang="es">Proceso</span><span lang="en">How it works</span></a>
+  <a href="#precios"><span lang="es">Precios</span><span lang="en">Pricing</span></a>
+  <a href="#zona"><span lang="es">Zona</span><span lang="en">Area</span></a>
+  <a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+</aside>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-bg"><img src="img/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="eyebrow ld" style="color:var(--gold);--i:0"><span lang="es">Limpieza de casas · Ocala, FL</span><span lang="en">House cleaning · Ocala, FL</span></div>
+    <h1 class="ld" style="--i:1"><span lang="es">Tu casa limpia, <em>sin esfuerzo.</em></span><span lang="en">Your home, <em>effortlessly clean.</em></span></h1>
+    <p class="lead ld" style="--i:2">
+      <span lang="es">Limpieza regular, profunda y de mudanza con personal de confianza. Te cotizamos con unas fotos, sin visitas ni compromisos.</span>
+      <span lang="en">Recurring, deep and move-out cleaning by a trusted team. Get a quote from a few photos — no visits, no commitment.</span></p>
+    <div class="cta ld" style="--i:3">
+      <a class="btn btn--gold" href="#contacto"><span lang="es">Pedir cotización</span><span lang="en">Get a quote</span></a>
+      <a class="btn btn--line" href="#servicios"><span lang="es">Ver servicios</span><span lang="en">See services</span></a>
+    </div>
+    <div class="badges ld" style="--i:4">
+      <span><span lang="es">Asegurados</span><span lang="en">Insured</span></span>
+      <span><span lang="es">Personal verificado</span><span lang="en">Background-checked</span></span>
+      <span><span lang="es">Hablamos español e inglés</span><span lang="en">We speak English &amp; Spanish</span></span>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<section class="section" id="servicios"><div class="wrap">
+  <div class="eyebrow rv"><span lang="es">Servicios</span><span lang="en">Services</span></div>
+  <h2 class="rv" style="--i:1"><span lang="es">Limpieza a tu <em>medida</em></span><span lang="en">Cleaning, <em>tailored</em> to you</span></h2>
+  <p class="lead rv" style="--i:2"><span lang="es">Cada casa es distinta. Elige el servicio y ajustamos el plan a tu hogar.</span><span lang="en">Every home is different. Pick a service and we'll shape the plan around yours.</span></p>
+  <div class="grid g3">
+    <article class="card rv" style="--i:0"><div class="ph rv-img"><img loading="lazy" src="img/kitchen.jpg" width="1600" height="1067" alt=""></div>
+      <div class="tx"><h3><span lang="es">Limpieza regular</span><span lang="en">Recurring clean</span></h3>
+      <p><span lang="es">Semanal, quincenal o mensual. Mantén tu casa impecable sin pensarlo.</span><span lang="en">Weekly, bi-weekly or monthly. Keep your home spotless on autopilot.</span></p></div></article>
+    <article class="card rv" style="--i:1"><div class="ph rv-img"><img loading="lazy" src="img/wipe.jpg" width="1600" height="1067" alt=""></div>
+      <div class="tx"><h3><span lang="es">Limpieza profunda</span><span lang="en">Deep clean</span></h3>
+      <p><span lang="es">Zócalos, interiores de electrodomésticos, baños y cocina a fondo. Ideal la primera vez.</span><span lang="en">Baseboards, inside appliances, bathrooms and kitchen top to bottom. Perfect for a first visit.</span></p></div></article>
+    <article class="card rv" style="--i:2"><div class="ph rv-img"><img loading="lazy" src="img/stairs.jpg" width="1600" height="1067" alt=""></div>
+      <div class="tx"><h3><span lang="es">Mudanza (entrada/salida)</span><span lang="en">Move-in / move-out</span></h3>
+      <p><span lang="es">Entrega la casa lista o recíbela como nueva. Cumple con lo que piden los propietarios.</span><span lang="en">Hand over a spotless home or start fresh in a new one. Landlord-ready.</span></p></div></article>
+  </div>
+</div></section>
+
+<section class="band" aria-label="quote">
+  <img src="img/mop.jpg" alt="" loading="lazy" id="parallax">
+  <blockquote class="rv"><span lang="es">No es solo limpieza, es <b>tiempo</b> que vuelve a ser tuyo.</span><span lang="en">It's not just cleaning, it's <b>time</b> given back to you.</span></blockquote>
+</section>
+
+<section class="section" id="galeria"><div class="wrap">
+  <div class="eyebrow rv"><span lang="es">Galería</span><span lang="en">Gallery</span></div>
+  <h2 class="rv" style="--i:1"><span lang="es">Cada casa, <em>como nueva</em></span><span lang="en">Every home, <em>like new</em></span></h2>
+  <p class="lead rv" style="--i:2"><span lang="es">Toca una foto para verla en grande.</span><span lang="en">Tap a photo to enlarge it.</span></p>
+  <div class="gal">
+    <figure class="a rv-img rv"><img loading="lazy" src="img/hero.jpg" alt=""></figure>
+    <figure class="b rv-img rv" style="--i:1"><img loading="lazy" src="img/kitchen2.jpg" alt=""></figure>
+    <figure class="c rv-img rv" style="--i:2"><img loading="lazy" src="img/floor.jpg" alt=""></figure>
+    <figure class="d rv-img rv" style="--i:3"><img loading="lazy" src="img/vacuum.jpg" alt=""></figure>
+  </div>
+</div></section>
+
+<section class="section section--sage" id="proceso"><div class="wrap">
+  <div class="eyebrow rv"><span lang="es">Proceso</span><span lang="en">How it works</span></div>
+  <h2 class="rv" style="--i:1"><span lang="es">Reservar es <em>fácil</em></span><span lang="en">Booking is <em>easy</em></span></h2>
+  <div class="grid g3 steps">
+    <div class="step rv"><h3><span lang="es">Envíanos fotos</span><span lang="en">Send us photos</span></h3>
+      <p class="lead"><span lang="es">Por WhatsApp o el formulario: fotos de las áreas y cuántos cuartos y baños tiene.</span><span lang="en">Via WhatsApp or the form: photos of the areas plus bedrooms and bathrooms.</span></p></div>
+    <div class="step rv" style="--i:1"><h3><span lang="es">Recibe tu precio</span><span lang="en">Get your price</span></h3>
+      <p class="lead"><span lang="es">Te damos una cotización exacta. Confirmas con un depósito que se descuenta del total.</span><span lang="en">We reply with an exact quote. Confirm with a deposit that's deducted from the total.</span></p></div>
+    <div class="step rv" style="--i:2"><h3><span lang="es">Relájate</span><span lang="en">Relax</span></h3>
+      <p class="lead"><span lang="es">Llegamos con todo el material. Si algo no te convence, volvemos a limpiar sin costo.</span><span lang="en">We bring all supplies. If anything's missed, we come back and re-clean free.</span></p></div>
+  </div>
+</div></section>
+
+<section class="section section--pine" id="precios"><div class="wrap price-box">
+  <div class="rv">
+    <div class="eyebrow"><span lang="es">Precios</span><span lang="en">Pricing</span></div>
+    <h2><span lang="es">Transparente, <em>sin sorpresas</em></span><span lang="en">Transparent, <em>no surprises</em></span></h2>
+    <div class="price"><small><span lang="es">LIMPIEZA REGULAR DESDE</span><span lang="en">RECURRING CLEAN FROM</span></small>$<span data-count="120">120</span></div>
+    <!-- TODO: confirmar precios reales -->
+    <p class="price-note"><span lang="es">El precio final depende del tamaño, el estado de la casa y la frecuencia.</span><span lang="en">Final price depends on size, condition and frequency.</span></p>
+  </div>
+  <div class="rv" style="--i:2">
+    <div class="rate"><span><span lang="es">Regular (hasta 2 hab.)</span><span lang="en">Recurring (up to 2 bd)</span></span><b>$120+</b></div>
+    <div class="rate"><span><span lang="es">Profunda</span><span lang="en">Deep clean</span></span><b>$220+</b></div>
+    <div class="rate"><span><span lang="es">Mudanza</span><span lang="en">Move-in / out</span></span><b>$260+</b></div>
+    <ul class="check" style="margin-top:22px">
+      <li><span lang="es">Baños y cocina completos</span><span lang="en">Full bathrooms &amp; kitchen</span></li>
+      <li><span lang="es">Polvo, pisos y superficies</span><span lang="en">Dusting, floors &amp; surfaces</span></li>
+      <li><span lang="es">Productos y equipo incluidos</span><span lang="en">Supplies &amp; equipment included</span></li>
+      <li><span lang="es">Garantía de re-limpieza</span><span lang="en">Re-clean guarantee</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="stats">
+    <div class="rv"><b><span data-count="100">100</span>%</b><span><span lang="es">Asegurados</span><span lang="en">Insured</span></span></div>
+    <div class="rv" style="--i:1"><b data-count="2">2</b><span><span lang="es">Idiomas</span><span lang="en">Languages</span></span></div>
+    <div class="rv" style="--i:2"><b><span data-count="24">24</span>h</b><span><span lang="es">Respuesta</span><span lang="en">Reply time</span></span></div>
+    <div class="rv" style="--i:3"><b>✓</b><span><span lang="es">Garantía</span><span lang="en">Guarantee</span></span></div>
+  </div>
+</div></section>
+
+<section class="section section--sage" id="zona"><div class="wrap">
+  <div class="eyebrow rv"><span lang="es">Zona de servicio</span><span lang="en">Service area</span></div>
+  <h2 class="rv" style="--i:1"><span lang="es">Ocala y <em>alrededores</em></span><span lang="en">Ocala &amp; <em>nearby</em></span></h2>
+  <p class="lead rv" style="--i:2"><span lang="es">Atendemos Marion County. ¿No ves tu zona? Escríbenos.</span><span lang="en">We serve Marion County. Don't see your area? Message us.</span></p>
+  <div class="chips rv" style="--i:3"><span>Ocala</span><span>Belleview</span><span>Silver Springs</span><span>Dunnellon</span><span>Summerfield</span><span>The Villages</span><span>Marion Oaks</span></div>
+</div></section>
+
+<section class="section section--pine" id="contacto"><div class="wrap contact">
+  <div class="info rv">
+    <div class="eyebrow"><span lang="es">Contacto</span><span lang="en">Contact</span></div>
+    <h2><span lang="es">Pide tu <em>cotización</em></span><span lang="en">Request your <em>quote</em></span></h2>
+    <p><span lang="es">Llena el formulario y se abre WhatsApp con tu mensaje listo. Adjunta las fotos ahí.</span><span lang="en">Fill the form and WhatsApp opens with your message ready. Attach photos there.</span></p>
+    <p>📞 <a href="tel:+13525550100">+1 (352) 555-0100</a><br>📍 Ocala, FL<br>
+       <span lang="es">Solo con cita previa</span><span lang="en">By appointment only</span></p>
+    <p class="policy"><span lang="es">Cambios con 24 h de antelación. Depósito descontable del total. Se requiere acceso a la casa.</span><span lang="en">Changes need 24 h notice. Deposit is deducted from the total. Home access required.</span></p>
+  </div>
+  <form id="quote" class="rv" style="--i:2">
+    <label><span lang="es">Nombre</span><span lang="en">Name</span><input name="n" required autocomplete="name"></label>
+    <label><span lang="es">Servicio</span><span lang="en">Service</span>
+      <select name="s">
+        <option value="regular">Regular / Recurrente</option>
+        <option value="deep">Deep / Profunda</option>
+        <option value="move">Move-in/out / Mudanza</option>
+      </select></label>
+    <label><span lang="es">Cuartos / baños</span><span lang="en">Bedrooms / bathrooms</span><input name="b" placeholder="3 / 2"></label>
+    <label><span lang="es">Notas</span><span lang="en">Notes</span><textarea name="m" rows="3"></textarea></label>
+    <button class="btn btn--gold" type="submit"><span lang="es">Enviar por WhatsApp</span><span lang="en">Send via WhatsApp</span></button>
+  </form>
+</div></section>
+</main>
+
+<footer>© <span id="y"></span> Nuvia Cleaning · Ocala, FL · <span lang="es">Fotos:</span><span lang="en">Photos:</span> <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<a class="float" id="wa" href="#" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.7L3 29l6.5-2A13 13 0 1 0 16 3zm7.3 18.4c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.200-.4-2-.8-3.600-1.600-5.900-5.200-6.100-5.400-.2-.2-1.400-1.900-1.400-3.600 0-1.700.9-2.500 1.200-2.900.3-.3.700-.4.900-.4h.7c.2 0 .5-.1.800.6l1 2.500c.1.200.1.400 0 .6l-.4.600-.5.600c-.2.200-.3.400-.1.700.2.300.9 1.500 2 2.400 1.400 1.200 2.500 1.600 2.900 1.800.3.200.5.100.7-.1l1-1.200c.2-.3.500-.2.800-.1l2.400 1.100c.3.200.5.200.6.400.1.100.1.800-.2 1.700z"/></svg></a>
+
+<script>
+const PHONE="13525550100"; // TODO: reemplazar por el WhatsApp real (formato 1XXXXXXXXXX)
+const root=document.documentElement, $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+const hello={es:"¡Hola! Vengo de tu web y me gustaría una cotización de limpieza.",en:"Hi! I found you on your website and I'd like a cleaning quote."};
+const alts={
+ "img/hero.jpg":["Limpiando el piso de una sala luminosa","Mopping the floor of a bright living room"],
+ "img/kitchen.jpg":["Cocina moderna y reluciente","Bright, modern kitchen"],
+ "img/wipe.jpg":["Limpieza profunda de superficies","Deep-cleaning a surface"],
+ "img/stairs.jpg":["Limpiadora con su kit subiendo la escalera","Cleaner carrying a caddy up the stairs"],
+ "img/mop.jpg":["Limpiando un piso de madera","Mopping a wooden floor"],
+ "img/kitchen2.jpg":["Cocina blanca con isla","White kitchen with island"],
+ "img/floor.jpg":["Limpiando el piso con guantes","Cleaning a floor with gloves"],
+ "img/vacuum.jpg":["Aspirando un mueble","Vacuuming furniture"]};
+function setLang(l){
+  root.lang=l;
+  try{localStorage.setItem("lang",l)}catch(e){}
+  $("#wa").href=wa(hello[l]);
+  $$("img").forEach(i=>{const a=alts[i.getAttribute("src")];if(a)i.alt=a[l==="es"?0:1]});
+}
+$$(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+setLang(saved||((navigator.language||"").startsWith("en")?"en":"es"));
+$("#y").textContent=new Date().getFullYear();
+
+/* header solid on scroll + mobile drawer */
+const hd=$("#hd");
+const onScroll=()=>{hd.classList.toggle("solid",scrollY>40||document.body.classList.contains("menu"));par()};
+$("#burger").onclick=()=>{document.body.classList.toggle("menu");onScroll()};
+$$(".drawer a").forEach(a=>a.onclick=()=>{document.body.classList.remove("menu");onScroll()});
+
+/* parallax band */
+const px=$("#parallax");
+function par(){
+  const r=px.parentElement.getBoundingClientRect();
+  if(r.bottom<0||r.top>innerHeight)return;
+  px.style.transform=`translateY(${((r.top+r.height/2)-innerHeight/2)*-.12}px)`;
+}
+let tick=false;
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(()=>{onScroll();tick=false})}},{passive:true});
+onScroll();
+
+/* reveal on scroll + count-up */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add("in");io.unobserve(e.target);
+  e.target.querySelectorAll("[data-count]").forEach(c=>{
+    const to=+c.dataset.count;if(reduce||to<5)return;
+    const t0=performance.now();
+    (function f(t){const p=Math.min(1,(t-t0)/1400);c.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0);
+  });
+}),{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+$$(".rv,.rv-img").forEach(el=>io.observe(el));
+
+/* lightbox */
+const lb=$("#lb"),lbi=lb.querySelector("img");
+$$(".gal figure").forEach(f=>f.onclick=()=>{const i=f.querySelector("img");lbi.src=i.src;lbi.alt=i.alt;lb.classList.add("open")});
+lb.onclick=()=>lb.classList.remove("open");
+addEventListener("keydown",e=>{if(e.key==="Escape"){lb.classList.remove("open");document.body.classList.remove("menu");onScroll()}});
+
+/* quote form -> WhatsApp */
+$("#quote").onsubmit=e=>{
+  e.preventDefault();
+  const f=new FormData(e.target),l=root.lang;
+  const t=l==="es"
+    ?`¡Hola! Soy ${f.get("n")}. Quiero cotizar limpieza ${f.get("s")}. Cuartos/baños: ${f.get("b")||"-"}. ${f.get("m")}`
+    :`Hi! I'm ${f.get("n")}. I'd like a ${f.get("s")} cleaning quote. Bedrooms/bathrooms: ${f.get("b")||"-"}. ${f.get("m")}`;
+  window.open(wa(t),"_blank","noopener");
+};
+</script>
+</body>
+</html>
