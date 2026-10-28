@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin · The Cleaning Sisters</title>
+<style>
+:root{--pine-900:#0A1B4D;--pine-700:#1B3F94;--pine-500:#3B8FE0;--sage-200:#D6E6F7;--sage-100:#E8F2FC;--cream:#F5F9FE;--gold:#D4A63F;--ink:#0E1B3D;--ink-soft:#55627F;--f-display:"Playfair Display",Georgia,serif;--f-body:"Montserrat",system-ui,sans-serif;--radius-lg:28px}
+*{box-sizing:border-box;margin:0}
+[lang=en]{display:none!important}
+body{font-family:var(--f-body);background:var(--cream);color:var(--ink);padding:24px 16px 60px;line-height:1.5}
+main{max-width:480px;margin:0 auto}
+h1{font:500 30px var(--f-display);margin-bottom:6px}
+p.s{color:var(--ink-soft);font-size:14px;margin-bottom:18px}
+input,button.b{font:500 16px var(--f-body);padding:14px 16px;border-radius:12px;border:1px solid var(--sage-200);width:100%;margin-bottom:10px;background:#fff}
+button.b{background:var(--pine-700);color:#fff;border:0;cursor:pointer;font-weight:600}
+button.b.alt{background:none;color:var(--pine-700);border:1px solid var(--sage-200)}
+.err{color:#9B2C2C;font-size:14px;min-height:20px}
+.wd{display:flex;gap:6px;margin:8px 0 4px}
+.wd label{flex:1;text-align:center;font-size:12px;font-weight:600;background:#fff;border:1px solid var(--sage-200);border-radius:10px;padding:10px 0;cursor:pointer}
+.wd input{display:none}.wd label:has(input:checked){background:var(--pine-700);color:#fff}
+h2{font:500 20px var(--f-display);margin:26px 0 4px}
+#saved{font-size:13px;color:var(--ink-soft);height:18px;margin-top:10px;text-align:center}
+</style>
+</head>
+<body>
+<main>
+<h1>The Cleaning Sisters</h1>
+
+<form id="login">
+  <p class="s">Panel de disponibilidad</p>
+  <input id="em" type="email" placeholder="Correo" autocomplete="username" required>
+  <input id="pw" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+  <button class="b" type="submit">Entrar</button>
+  <p class="err" id="err"></p>
+</form>
+
+<div id="panel" hidden>
+  <p class="s">Toca un día para cambiarlo: libre → ocupado → solo mañana → solo tarde → libre. Se guarda al instante.</p>
+  <div class="cal" id="cal"></div>
+  <div id="saved"></div>
+  <h2>Días que normalmente atiendes</h2>
+  <p class="s">Los días sin marcar aparecen cerrados al público (puedes abrir uno suelto tocándolo en el calendario).</p>
+  <div class="wd" id="wd"></div>
+  <button class="b alt" id="out" style="margin-top:24px">Salir</button>
+</div>
+</main>
+<script src="cal.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+let tok=null,data=null;
+const store=v=>{try{v?localStorage.setItem("adm",JSON.stringify(v)):localStorage.removeItem("adm")}catch(e){}};
+const auth=(body,grant)=>sb("/auth/v1/token?grant_type="+grant,{method:"POST",body});
+
+async function enter(s){
+  tok=s.access_token;store({r:s.refresh_token});
+  data=await loadCal();
+  $("#login").hidden=true;$("#panel").hidden=false;
+  drawWd();draw();
+}
+
+$("#login").onsubmit=async e=>{
+  e.preventDefault();$("#err").textContent="";
+  try{await enter(await auth({email:$("#em").value,password:$("#pw").value},"password"))}
+  catch{$("#err").textContent="Correo o contraseña incorrectos."}
+};
+$("#out").onclick=()=>{store(null);location.reload()};
+
+(async()=>{ // reanuda sesión
+  try{const r=JSON.parse(localStorage.getItem("adm")||"null");if(r)await enter(await auth({refresh_token:r.r},"refresh_token"))}
+  catch{store(null)}
+})();
+
+const note=t=>{$("#saved").textContent=t;clearTimeout(note.t);note.t=setTimeout(()=>$("#saved").textContent="",2500)};
+async function save(k,status){ // status null = volver al horario base
+  try{
+    if(status)await sb("/rest/v1/availability?on_conflict=day",{method:"POST",token:tok,body:{day:k,status},prefer:"resolution=merge-duplicates,return=minimal"});
+    else await sb("/rest/v1/availability?day=eq."+k,{method:"DELETE",token:tok});
+    note("Guardado ✓");
+  }catch{note("No se pudo guardar — vuelve a entrar");}
+}
+
+const draw=()=>renderCal($("#cal"),{...$("#cal")._opts,admin:true,data,onPick:(k,c,wd)=>{
+  const base=data.open.includes(wd);
+  const seq=base?[null,"busy","am","pm"]:[null,"open","busy","am","pm"];
+  const cur=data.map[k]||null;
+  const next=seq[(seq.indexOf(cur)+1)%seq.length];
+  next?data.map[k]=next:delete data.map[k];
+  draw();save(k,next);
+}});
+
+function drawWd(){
+  const n=["D","L","M","X","J","V","S"];
+  $("#wd").innerHTML=n.map((x,i)=>`<label><input type="checkbox" value="${i}"${data.open.includes(i)?" checked":""}>${x}</label>`).join("");
+  $("#wd").onchange=async()=>{
+    data.open=[...$("#wd").querySelectorAll("input:checked")].map(i=>+i.value);
+    try{await sb("/rest/v1/settings?id=eq.1",{method:"PATCH",token:tok,body:{open_weekdays:data.open},prefer:"return=minimal"});note("Guardado ✓")}
+    catch{note("No se pudo guardar — vuelve a entrar")}
+    draw();
+  };
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "montserrat",
+        "createdAt": "2026-10-26T15:17:31.239Z",
+        "reason": "intentional: Montserrat/Playfair pairing taken from the reference site the user asked to emulate (aliciasnailstudio.com)"
+      }
+    ]
+  }
+}
